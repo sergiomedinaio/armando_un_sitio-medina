@@ -1,4 +1,6 @@
-<h1 class="text-center my-5"> Comics de <?= $serieSeleccionada; ?></h1>
+<?php include('partials/header.php') ?>
+
+    <h1 class="text-center my-5"> Comics de <?= $serieSeleccionada; ?></h1>
 <div class="row">
      <div class="col-3">
         <div class="card mb-3">
