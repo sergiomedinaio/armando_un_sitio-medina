@@ -1,8 +1,6 @@
 <h1 class="text-center my-5"> Comics de <?= $serieSeleccionada; ?></h1>
 <div class="row">
-
-    <?PHP foreach ($serie as $comic) { ?>
-        <div class="col-3">
+     <div class="col-3">
         <div class="card mb-3">
             <img src="img/covers/<?= $comic['portada']; ?>" class="card-img-top" alt="Portada de <?= $comic['serie']; ?> Vol.<?= $comic['volumen']; ?> #<?= $comic['numero']; ?>">
             <div class="card-body">
@@ -22,6 +20,4 @@
 
         </div>
     </div>
-    <?PHP } ?>
-
-</div>
+<?php include('partials/footer.php') ?>
