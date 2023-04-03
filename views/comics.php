@@ -33,6 +33,10 @@ $personajes = [
 $personaje = $personajes[$id];
 ?>
 
+<script>
+    console.log(<?=json_encode($personajes)?>);
+</script>
+
 <div class="container">
     <h1 class="text-center my-5"> <?=$personaje['nombre']?></h1>
     <div class="row">
