@@ -21,10 +21,10 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" href="index.php">Home</a>
+                    <a class="nav-link active" href="index.php?seccion=home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="quienes_somos.php">¿Quienes somos?</a>
+                    <a class="nav-link" href="index.php?seccion=quienes_somos">¿Quienes somos?</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="ms_marvel.php">Ms. Marvel</a>
@@ -33,7 +33,7 @@
                     <a class="nav-link" href="hawkeye.php">Hawkeye / Ojo de Halcón</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="envios.php">Envios</a>
+                    <a class="nav-link" href="index.php?seccion=envios">Envios</a>
                 </li>
             </ul>
         </div>
