@@ -27,10 +27,10 @@
                     <a class="nav-link" href="index.php?seccion=quienes_somos">¿Quienes somos?</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?seccion=comics&id=0">Ms. Marvel</a>
+                    <a class="nav-link" href="index.php?seccion=comics&id=ms_marvel">Ms. Marvel</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?seccion=comics&id=1">Hawkeye / Ojo de Halcón</a>
+                    <a class="nav-link" href="index.php?seccion=comics&id=hawkeye">Hawkeye / Ojo de Halcón</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="index.php?seccion=envios">Envios</a>

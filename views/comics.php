@@ -4,22 +4,20 @@ require_once 'libs/catalogos.php';
 $id = $_GET['id'];
 $id = $id ? $id : 0;
 
-$personajes = obtenerCatalogoPersonajes();
+$personajes = obtenerCatalogo();
 
-$personaje = $personajes[$id];
+$comics = filtrarPorPersonaje($personajes, $id);
 
 ?>
 
 <script>
-
+    console.log("personajes: ", <?=json_encode($comics)?>);
 </script>
 
 <div class="container">
-    <h1 class="text-center my-5"> <?=$personaje['nombre']?></h1>
+    <h1 class="text-center my-5"> <!--?=$personaje['nombre']?--></h1>
     <div class="row">
-        <div class="col-3">
-
-        </div>
+        <?php foreach ($comics as $personaje) {?>
         <div class="col-3">
             <div class="card mb-3">
                 <img src="<?= $personaje['imagen'] ?>" class="card-img-top" alt="Portada de Ms. Marvel Vol. 3 #1">
@@ -40,5 +38,6 @@ $personaje = $personajes[$id];
 
             </div>
         </div>
+        <?php } ?>
     </div>
 </div>
