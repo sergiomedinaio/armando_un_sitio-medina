@@ -19,9 +19,13 @@ class Comic
     protected $comprar;
 
 
-    public function getAll(): array {
+    public function getAll($personaje): array {
         $conexion = (new Connection())->getConection();
-        $query = "SELECT * FROM comics";
+        if($personaje) {
+            $query = "SELECT * FROM comics WHERE id_personaje = '".$personaje."'";
+        }else {
+            $query = "SELECT * FROM comics";
+        }
         $stmt = $conexion->prepare($query);
         $stmt->setFetchMode(PDO::FETCH_CLASS, self::class);
         $stmt->execute();
