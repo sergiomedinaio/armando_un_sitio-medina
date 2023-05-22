@@ -104,7 +104,7 @@ class Comic
      */
     public function getEdicion()
     {
-        return $this->edicion;
+        return "Edición #" . $this->edicion;
     }
 
     /**
