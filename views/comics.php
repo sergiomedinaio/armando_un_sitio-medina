@@ -25,7 +25,7 @@ $comics= $miComic->getCatalogById($id);
                 <div class="card-body">
                     <p class="fs-6 m-0 fw-bold text-danger"><?=$personaje->getEdicion()?></p>
                     <h5 class="card-title"><?=$personaje->getTitulo()?></h5>
-                    <p class="card-text"><?=$personaje->getDescripcion()?></p>
+                    <p class="card-text"><?=$personaje->getDescripcionCorta()?></p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Guion: <?=$personaje->getGuion()?></li>

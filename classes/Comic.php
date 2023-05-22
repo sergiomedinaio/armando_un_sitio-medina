@@ -85,6 +85,17 @@ class Comic
         return $this->descripcion;
     }
 
+    public function getDescripcionCorta() {
+        $cantidadPalabras = 30;
+        $palabras = explode(" ", $this->getDescripcion());
+        if(count($palabras) > $cantidadPalabras) {
+            $palabras = array_slice($palabras, 0, $cantidadPalabras);
+            return implode(" ", $palabras) . "...";
+        } else {
+            return $this->getDescripcion();
+        }
+    }
+
     /**
      * @return mixed
      */
