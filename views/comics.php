@@ -33,7 +33,7 @@ $comics= $miComic->getAll($id);
                     <li class="list-group-item">Publicación: <?=$personaje->getPublicacion()?></li>
                 </ul>
                 <div class="card-body">
-                    <div class="fs-3 mb-3 fw-bold text-center text-danger"><?=$personaje->getPrecio()?></div>
+                    <div class="fs-3 mb-3 fw-bold text-center text-danger">$ <?=$personaje->getPrecioFormateado()?></div>
                     <a href="#" class="btn btn-danger w-100 fw-bold"><?=$personaje->getComprar()?></a>
                 </div>
 

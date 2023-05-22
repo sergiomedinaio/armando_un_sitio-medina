@@ -120,6 +120,10 @@ class Comic
         return $this->precio;
     }
 
+    public function getPrecioFormateado() {
+        return number_format($this->getPrecio(), 2, ',', '.');
+    }
+
     /**
      * @return mixed
      */
