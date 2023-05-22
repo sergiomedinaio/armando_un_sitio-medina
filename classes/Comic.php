@@ -8,7 +8,9 @@ class Comic
     protected $id;
     protected $personaje;
     protected $nombre;
-    protected $titulo;
+    protected $serie;
+    protected  $volumen;
+    protected  $numero;
     protected $descripcion;
     protected $imagen;
     protected $guion;
@@ -72,7 +74,7 @@ class Comic
      */
     public function getTitulo()
     {
-        return $this->titulo;
+        return $this->serie . " Vol. ". $this->volumen .  " #" . $this->numero;
     }
 
     /**
