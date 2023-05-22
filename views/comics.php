@@ -8,7 +8,7 @@ $id = $_GET['id'];
 $id = $id ? $id : "";
 
 $miComic = new Comic();
-$comics= $miComic->getAll($id);
+$comics= $miComic->getCatalogById($id);
 ?>
 
 <script>
