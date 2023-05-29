@@ -52,7 +52,7 @@ class Guionista
         return $stmt->fetchAll();
     }
 
-    public function getById($id):array {
+    public function getById($id) {
         if(!$id) return [];
         $conexion = (new Connection())->getConection();
         $query = "SELECT * FROM guionista WHERE id = :id";
@@ -60,11 +60,14 @@ class Guionista
         $stmt->setFetchMode(PDO::FETCH_CLASS, self::class);
         $stmt->execute(
             [
-                'id' => 1
+                'id' => $id
             ]
         );
 
-        return $stmt->fetchAll();
+        $result =  $stmt->fetch();
+        if(!$result) return null;
+        return $result;
+
     }
 
 }

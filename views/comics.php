@@ -1,7 +1,9 @@
 <?php
 use classes\Comic;
+use classes\Guionista;
 
 require_once 'classes/Comic.php';
+require_once 'classes/Guionista.php';
 require_once 'classes/Connection.php';
 
 $id = $_GET['id'];
@@ -9,6 +11,7 @@ $id = $id ? $id : "";
 
 $miComic = new Comic();
 $comics= $miComic->getCatalogById($id);
+
 ?>
 
 <script>

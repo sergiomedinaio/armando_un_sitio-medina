@@ -109,7 +109,9 @@ class Comic
      */
     public function getGuion()
     {
-        return $this->guion;
+        $miGuionista = (new Guionista()); // Instancio la clase Guionista
+        $miGuionista = $miGuionista->getById($this->guion); // Obtengo el guionista con id 1
+        return $miGuionista->getNombreCompleto(); // Obtengo el nombre completo del guionista
     }
 
     /**
