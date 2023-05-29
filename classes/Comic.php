@@ -127,7 +127,9 @@ class Comic
      */
     public function getArte()
     {
-        return $this->arte;
+        $miArtista = (new Artista()); // Instancio la clase Artista
+        $artistas = $miArtista->getById($this->arte); // Obtengo todos los artistas
+        return $artistas->getNombreCompleto();
     }
 
     /**
