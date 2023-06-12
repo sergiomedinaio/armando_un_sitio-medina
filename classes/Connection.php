@@ -3,10 +3,10 @@ namespace classes;
 use PDO;
 
 class Connection {
-    public const DB_SERVER = "localhost";
-    public const DB_USER = "root";
+    public const DB_SERVER = "mysql-armandounsitio.alwaysdata.net";
+    public const DB_USER = "317144";
     public const DB_PASS = "";
-    public const DB_NAME = "armando_un_sitio";
+    public const DB_NAME = "armandounsitio_general";
 
     public const DB_DNS = "mysql:host=" . Connection::DB_SERVER . ";dbname=" . Connection::DB_NAME . ";charset=utf8mb4";
     protected PDO $db;
