@@ -13,6 +13,10 @@
                 <label for="foto_perfil" class="form-label">Foto perfil</label>
                 <input class="form-control" id="foto_perfil" placeholder="">
             </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Biografia</label>
+                <textarea class="form-control" id="description" rows="3"></textarea>
+            </div>
 
         </form>
     </div>
