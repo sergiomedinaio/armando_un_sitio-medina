@@ -10,4 +10,7 @@
 <body>
     <h1>Admin de mi Tiendita</h1>
     <p>Esto es el admin de mi tiendita</p>
+    <?php
+        require "views/add_artista.php";
+    ?>
 </body>
