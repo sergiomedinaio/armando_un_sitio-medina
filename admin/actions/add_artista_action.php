@@ -1,6 +1,7 @@
 <?php
 
 require_once "../../classes/Artista.php";
+require_once "../../classes/Connection.php";
 
 $postData = $_POST;
 

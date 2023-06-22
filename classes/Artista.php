@@ -71,7 +71,18 @@ class Artista
     }
 
     public function add($nombre_completo, $biografia, $foto_perfil) {
-        echo "Agregando artista: ".$nombre_completo." ".$biografia." ".$foto_perfil;
+        $conexion = (new Connection())->getConection();
+        $query = "INSERT INTO artista (nombre_completo, biografia, foto_perfil) VALUES (:nombre_completo, :biografia, :foto_perfil)";
+        $stmt = $conexion->prepare($query);
+        $stmt->execute(
+            [
+                'nombre_completo' => $nombre_completo,
+                'biografia' => $biografia,
+                'foto_perfil' => $foto_perfil
+            ]
+        );
+        $stmt->setFetchMode(PDO::FETCH_CLASS, self::class);
+        $stmt->fetch();
     }
 
 }
