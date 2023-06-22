@@ -86,7 +86,23 @@ class Artista
     }
 
     public function update($id, $nombre_completo, $biografia, $foto_perfil){
-        echo "update". $id. ": " .$nombre_completo." - ".$biografia." - ".$foto_perfil;
+        $conexion = (new Connection())->getConection();
+        $query = "UPDATE artista SET ".
+            "nombre_completo = :nombre_completo, ".
+            "biografia = :biografia, ".
+            "foto_perfil = :foto_perfil "
+        ."WHERE id = :id";
+        $stmt = $conexion->prepare($query);
+        $stmt->execute(
+            [
+                'id' => $id,
+                'nombre_completo' => $nombre_completo,
+                'biografia' => $biografia,
+                'foto_perfil' => $foto_perfil
+            ]
+        );
+        $stmt->setFetchMode(PDO::FETCH_CLASS, self::class);
+        $stmt->fetch();
     }
 
 }
