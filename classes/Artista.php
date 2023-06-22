@@ -85,4 +85,8 @@ class Artista
         $stmt->fetch();
     }
 
+    public function update($id, $nombre_completo, $biografia, $foto_perfil){
+        echo "update". $id. ": " .$nombre_completo." - ".$biografia." - ".$foto_perfil;
+    }
+
 }
