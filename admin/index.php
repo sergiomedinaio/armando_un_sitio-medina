@@ -1,23 +1,16 @@
 <?php
+$vista = $_GET['seccion'];
+$method = $_GET['method'];
+
+$vista = $method."_".$vista;
+
+$existe = file_exists("views/$vista.php");
+$vista_final = $existe ? $vista : '404';
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Admin de mi Tiendita</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-</head>
-<body>
+
+<?php require "./partials/header.php"; ?>
     <div class="container">
-        <h1>Admin de mi Tiendita</h1>
-        <p>Esto es el admin de mi tiendita</p>
-        <?php
-            require "views/add_artista.php";
-            require "views/update_artista.php";
-            require "views/remove_artista.php";
-        ?>
+        <?php include ("views/$vista_final.php") ?>
     </div>
-    <?php
-        require "../partials/footer.php";
-    ?>
+    <?php require "../partials/footer.php";?>
 </body>

@@ -78,7 +78,8 @@ class Artista
             [
                 'nombre_completo' => $nombre_completo,
                 'biografia' => $biografia,
-                'foto_perfil' => $foto_perfil
+                'foto_perfil' => $foto_perfil,
+                'baja' => 0
             ]
         );
         $stmt->setFetchMode(PDO::FETCH_CLASS, self::class);
