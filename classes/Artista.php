@@ -70,6 +70,8 @@ class Artista
         return $result;
     }
 
-
+    public function add($nombre_completo, $biografia, $foto_perfil) {
+        echo "Agregando artista: ".$nombre_completo." ".$biografia." ".$foto_perfil;
+    }
 
 }
