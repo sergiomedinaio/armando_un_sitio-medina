@@ -47,7 +47,7 @@ class Artista
     public function getAll(): array
     {
         $conexion = (new Connection())->getConection();
-        $query = "SELECT * FROM artista";
+        $query = "SELECT * FROM artista WHERE baja = 0";
         $stmt = $conexion->prepare($query);
         $stmt->setFetchMode(PDO::FETCH_CLASS, self::class);
         $stmt->execute();
@@ -57,7 +57,7 @@ class Artista
     public function getById($id)
     {
         $conexion = (new Connection())->getConection();
-        $query = "SELECT * FROM artista WHERE id = :id";
+        $query = "SELECT * FROM artista WHERE id = :id AND baja = 0";
         $stmt = $conexion->prepare($query);
         $stmt->setFetchMode(PDO::FETCH_CLASS, self::class);
         $stmt->execute(
