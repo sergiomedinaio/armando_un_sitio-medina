@@ -14,6 +14,10 @@
         <?php
             require "views/add_artista.php";
             require "views/update_artista.php";
+            require "views/remove_artista.php";
         ?>
     </div>
+    <?php
+        require "../partials/footer.php";
+    ?>
 </body>

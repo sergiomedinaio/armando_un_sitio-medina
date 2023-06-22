@@ -105,4 +105,17 @@ class Artista
         $stmt->fetch();
     }
 
+    public function remove($id){
+        $conexion = (new Connection())->getConection();
+        $query = "UPDATE artista SET baja = :baja WHERE id = :id";
+        $stmt = $conexion->prepare($query);
+        $stmt->execute(
+            [
+                'id' => $id,
+                'baja' => 1
+            ]
+        );
+        $stmt->setFetchMode(PDO::FETCH_CLASS, self::class);
+        $stmt->fetch();
+    }
 }
