@@ -20,6 +20,7 @@ class Autenticacion
     }
 
     public function checkLogin() {
+        //TODO: enable session
         return true;//isset($_SESSION["loggedIn"]);
     }
 
