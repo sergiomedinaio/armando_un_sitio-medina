@@ -2,7 +2,7 @@
 $vista = $_GET['seccion'];
 $method = $_GET['method'];
 
-$vista = $method."_".$vista;
+$vista = $method ? ($method."_".$vista) : $vista;
 
 $existe = file_exists("views/$vista.php");
 $vista_final = $existe ? $vista : '404';
