@@ -1,4 +1,5 @@
 <?php
+session_start();
 $vista = $_GET['seccion'];
 $method = $_GET['method'];
 

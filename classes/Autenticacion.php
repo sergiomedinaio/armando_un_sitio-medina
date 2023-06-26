@@ -9,16 +9,10 @@ class Autenticacion
     public function logIn(string $email, string $password) {
         try{
             $user = (new \classes\Usuario())->getUserByEmail($email);
-            if($user) {
-                if($user->getPassword() == $password) {
-                    return true;
-                } else {
-                    return false;
-                }
-
-            } else {
-                return false;
-            }
+            if(!$user) return false;
+            $loggedIn = ($user->getPassword() == $password);
+            $_SESSION["loggedIn"] = $loggedIn;
+            return $loggedIn;
         } catch(Exception $e) {
             echo e->getMessage();
         }
