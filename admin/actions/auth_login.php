@@ -1,6 +1,7 @@
 <?php
 require_once "../../classes/Autenticacion.php";
 require_once "../../classes/Connection.php";
+require_once "../../classes/Usuario.php";
 
 $postData = $_POST;
 

@@ -1,6 +1,8 @@
 <?php
 
 namespace classes;
+use PDO;
+
 class Usuario
 {
 protected $id;
