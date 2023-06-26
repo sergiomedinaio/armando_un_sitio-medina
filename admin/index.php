@@ -1,7 +1,13 @@
 <?php
+require_once "../classes/Autenticacion.php";
 session_start();
-$vista = $_GET['seccion'];
-$method = $_GET['method'];
+if((new \classes\Autenticacion())->checkLogin()) {
+    $vista = $_GET['seccion'];
+    $method = $_GET['method'];
+} else {
+    $method = "";
+    $vista = "login";
+}
 
 $vista = $method ? ($method."_".$vista) : $vista;
 

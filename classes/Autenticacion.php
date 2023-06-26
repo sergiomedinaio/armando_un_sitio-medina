@@ -18,4 +18,9 @@ class Autenticacion
         }
         return false;
     }
+
+    public function checkLogin() {
+        return true;//isset($_SESSION["loggedIn"]);
+    }
+
 }
